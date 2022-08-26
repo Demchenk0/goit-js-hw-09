@@ -39,9 +39,10 @@ const timer = {
             showTime(days, hours, minutes, seconds);
             console.log(days, hours, minutes, seconds);
             if (deltaTime < 1000) {
-                clearInterval(timerId);
+              clearInterval(timerId);
+              buttonStart.disabled = false;
             }
-            console.log(deltaTime);
+            // console.log(deltaTime);
     // console.log(`${days}, ${hours}, ${minutes}, ${seconds}`);
 }, 1000); 
 }
@@ -59,7 +60,8 @@ minuteIncrement: 1,
         
         if (selectedDates[0].getTime() < currentTime) {
             console.log(selectedDates[0].getTime());
-        console.log(currentTime);
+          console.log(currentTime);
+          buttonStart.disabled = true;
             return Notify.failure('ai dont noy');
             
     } else {

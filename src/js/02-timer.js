@@ -65,6 +65,7 @@ minuteIncrement: 1,
             return Notify.failure('ai dont noy');
             
     } else {
+      buttonStart.disabled = false;
             return Notify.success('Molodec');
             }
     
